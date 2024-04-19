@@ -12,21 +12,24 @@ o resultado é menor que 0,7, exiba uma recomendação dizendo para abastecer co
 for maior, exiba a recomendação para escolher a gasolina.
 */
 
-#include <iostream>
+#include<iostream>
 using namespace std;
 
 int main(){
+    float alcool, gasolina, relacao;
+
+    cout << "Esse programa calcula a melhor opcao entre alcool e gasolina com base no preco.\n";
+    cout << "Insira o valor da gasolina: ";
+    cin >> gasolina;
+
+    cout << "\nInsira o valor do alcool: ";
+    cin >> alcool;
+
+    relacao =  alcool / gasolina;
     
-    float litrosDeGasolina, quilometrosRodados, mediaDeConsumo;
-
-    cout << "Esse programa calcula a quantidade de gasolina consumida dado o tanque completo, a media total km/l.";
-    cout << "\n Insira a quantidade de litros: ";
-    cin >> litrosDeGasolina;
-
-    cout << "\n Insira quantos quilometros foram rodados: ";
-    cin >> quilometrosRodados;
-
-    mediaDeConsumo = quilometrosRodados / litrosDeGasolina;
-
-    cout << "\n A media de consumo de km/l: " << mediaDeConsumo;
+    if (relacao < 0.7){
+        cout << "Recomendo que escolha o alcool";
+    } else {
+        cout << "recomendo que compre a gasolina";
+    }
 }
